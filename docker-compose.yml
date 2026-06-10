@@ -1,0 +1,9 @@
+services:
+  flowmind:
+    build: .
+    container_name: flowmind
+    ports:
+      - "4000:4000"
+    volumes:
+      - "${HOME}/.flowmind.json:/config/config.json:ro"
+    restart: unless-stopped
